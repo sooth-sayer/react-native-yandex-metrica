@@ -1,0 +1,50 @@
+{
+  "name": "react-native-yandex-metrica",
+  "version": "0.0.1",
+  "description": "React Native bridge for using native YandexMetrica libraries on iOS and Android",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test yet!\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/sooth_sayer/react-native-yandex-metrica.git"
+  },
+  "author": "Soothsayer",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "keywords": [
+    "react",
+    "native",
+    "yandex",
+    "metrica",
+    "tracking",
+    "native",
+    "bridge",
+    "events",
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "rnpm": {
+    "ios": {
+      "sharedLibraries": [
+        "SystemConfiguration.framework",
+        "UIKit.framework",
+        "Foundation.framework",
+        "CoreTelephony.framework",
+        "CoreLocation.framework",
+        "CoreGraphics.framework",
+        "AdSupport.framework",
+        "Security.framework",
+        "libc++.tbd",
+        "libz.tbd",
+        "libsqlite3.0.tbd"
+      ]
+    }
+  }
+}
+

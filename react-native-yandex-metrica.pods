@@ -2,7 +2,7 @@ require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 ios_root = 'ios/RCTYandexMetrica'
-ymlib_root = ios_root+'/yandex-metrica-lib'
+ymlib_root = ios_root+'/yandex-metrica-lib/static/YandexMobileMetrica.framework'
 
 Pod::Spec.new do |s|
   s.name         = "react-native-yandex-metrica"
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
       ymlib_root+'/YandexMobileMetrica'
 
     ss.source_files  =
-      ymlib_root+'/*.{h}',
+      ymlib_root+'/Headers/*.{h}',
       ios_root+'/RCTYandexMetrica/*.{h,m}'
   end
 
