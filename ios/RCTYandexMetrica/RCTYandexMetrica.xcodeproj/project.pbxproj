@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD7B154F1FE2B25300CF11C7 /* RCTYandexMetrica.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7B154E1FE2B25300CF11C7 /* RCTYandexMetrica.m */; };
 		BD7B15501FE2B25300CF11C7 /* RCTYandexMetrica.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD7B154D1FE2B25300CF11C7 /* RCTYandexMetrica.h */; };
+		BD874DE51FE3B13500838C25 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; fileRef = BD874DE41FE3B13500838C25 /* YandexMobileMetrica */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,14 @@
 		BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetrica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTYandexMetrica.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7B154D1FE2B25300CF11C7 /* RCTYandexMetrica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTYandexMetrica.h; sourceTree = "<group>"; };
 		BD7B154E1FE2B25300CF11C7 /* RCTYandexMetrica.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTYandexMetrica.m; sourceTree = "<group>"; };
+		BD874DE41FE3B13500838C25 /* YandexMobileMetrica */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = YandexMobileMetrica; path = "../yandex-metrica-lib/YandexMobileMetrica"; sourceTree = "<group>"; };
+		BD874DE71FE3B14900838C25 /* YMMYandexMetrica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMYandexMetrica.h; sourceTree = "<group>"; };
+		BD874DE81FE3B14900838C25 /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMYandexMetricaPreloadInfo.h; sourceTree = "<group>"; };
+		BD874DE91FE3B14900838C25 /* YMMYandexMetricaReporting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMYandexMetricaReporting.h; sourceTree = "<group>"; };
+		BD874DEA1FE3B14900838C25 /* YandexMobileMetrica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMobileMetrica.h; sourceTree = "<group>"; };
+		BD874DEB1FE3B14900838C25 /* YMMVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMVersion.h; sourceTree = "<group>"; };
+		BD874DEC1FE3B14900838C25 /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMYandexMetricaConfiguration.h; sourceTree = "<group>"; };
+		BD874DED1FE3B14900838C25 /* YandexMobileMetrica */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = YandexMobileMetrica; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD874DE51FE3B13500838C25 /* YandexMobileMetrica in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +54,10 @@
 		BD7B15411FE2B25300CF11C7 = {
 			isa = PBXGroup;
 			children = (
+				BD874DE61FE3B14900838C25 /* yandex-metrica-lib */,
 				BD7B154C1FE2B25300CF11C7 /* RCTYandexMetrica */,
 				BD7B154B1FE2B25300CF11C7 /* Products */,
+				BD874DE31FE3B13500838C25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +76,29 @@
 				BD7B154E1FE2B25300CF11C7 /* RCTYandexMetrica.m */,
 			);
 			path = RCTYandexMetrica;
+			sourceTree = "<group>";
+		};
+		BD874DE31FE3B13500838C25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD874DE41FE3B13500838C25 /* YandexMobileMetrica */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD874DE61FE3B14900838C25 /* yandex-metrica-lib */ = {
+			isa = PBXGroup;
+			children = (
+				BD874DE71FE3B14900838C25 /* YMMYandexMetrica.h */,
+				BD874DE81FE3B14900838C25 /* YMMYandexMetricaPreloadInfo.h */,
+				BD874DE91FE3B14900838C25 /* YMMYandexMetricaReporting.h */,
+				BD874DEA1FE3B14900838C25 /* YandexMobileMetrica.h */,
+				BD874DEB1FE3B14900838C25 /* YMMVersion.h */,
+				BD874DEC1FE3B14900838C25 /* YMMYandexMetricaConfiguration.h */,
+				BD874DED1FE3B14900838C25 /* YandexMobileMetrica */,
+			);
+			name = "yandex-metrica-lib";
+			path = "../yandex-metrica-lib";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +199,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -219,6 +255,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -238,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -249,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -9,6 +9,7 @@
 #import "RCTYandexMetrica.h"
 #import <React/RCTLog.h>
 #import <React/RCTConvert.h>
+#import "YandexMobileMetrica.h"
 
 @implementation RCTYandexMetrica {
 
@@ -16,7 +17,7 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(sendEvent:(NSString *)event)
+RCT_EXPORT_METHOD(reportEvent:(NSString *)event)
 {
   [YMMYandexMetrica reportEvent:event
     onFailure:^(NSError *error) {
@@ -25,4 +26,8 @@ RCT_EXPORT_METHOD(sendEvent:(NSString *)event)
   }];
 }
 
+RCT_EXPORT_METHOD(activateWithApiKey:(NSString *)apiKey)
+{
+    [YMMYandexMetrica activateWithApiKey:apiKey];
+}
 @end

@@ -1,7 +1,11 @@
 import { YandexMetrica as YandexMetricaNative } from './NativeModule';
 
 export class YandexMetrica {
-  sendEvent(evt) {
-    console.log('TODO');
+  static activateWithApiKey(apiKey) {
+    YandexMetricaNative.activateWithApiKey(apiKey);
+  }
+
+  static reportEvent(evt) {
+    YandexMetricaNative.reportEvent(evt);
   }
 }
