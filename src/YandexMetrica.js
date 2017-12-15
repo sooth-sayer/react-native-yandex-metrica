@@ -14,4 +14,8 @@ export class YandexMetrica {
     YandexMetricaBridgeNative.setDryRun(enabled);
   }
 
+  static isInitialized() {
+    return YandexMetricaBridgeNative.isInitialized();
+  }
+
 }

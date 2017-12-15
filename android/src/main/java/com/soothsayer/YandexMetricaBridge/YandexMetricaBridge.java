@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import com.facebook.react.bridge.Promise;
 
 import com.yandex.metrica.YandexMetrica;
 
@@ -22,6 +23,7 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
   }
 
   private boolean dryRun = false;
+  private boolean initialized = false;
 
   @Override
   public String getName() {
@@ -30,6 +32,7 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void activateWithApiKey(String apiKey) {
+    initialized = true;
     if (dryRun) {
       Log.i(TAG, "Dry run mode, skip Yandex Mobile Metrica activation");
       return;
@@ -44,12 +47,21 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
       Log.i(TAG, "Dry run mode, skip event reporting");
       return;
     }
-    YandexMetrica.reportEvent(event);
+    try {
+      YandexMetrica.reportEvent(event);
+    } catch (Exception e) {
+      Log.e(TAG, "Unable to report Yandex Mobile Metrica event: " + e);
+    }
   }
 
   @ReactMethod
   public void setDryRun(Boolean enabled) {
     dryRun = enabled;
+  }
+
+  @ReactMethod
+  public void isInitialized(Promise promise) {
+    promise.resolve(initialized);
   }
 
 }

@@ -16,10 +16,12 @@
 }
 
 BOOL dryRun = false;
+BOOL initialized = false;
 
 RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(activateWithApiKey:(NSString *)apiKey)
 {
+  initialized = true;
   if (dryRun) {
     NSLog(@"Dry run mode, skip Yandex Mobile Metrica activation");
     return;
@@ -43,6 +45,13 @@ RCT_EXPORT_METHOD(reportEvent:(NSString *)event)
 RCT_EXPORT_METHOD(setDryRun:(BOOL *)enabled)
 {
   dryRun = enabled;
+}
+
+RCT_EXPORT_METHOD(isInitialized:(RCTPromiseResolveBlock)resolve
+                  reject:(__unused RCTPromiseRejectBlock)reject)
+{
+    NSNumber *ret = [NSNumber numberWithBool:initialized];
+    resolve(ret);
 }
 
 @end
