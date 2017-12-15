@@ -1,11 +1,17 @@
-import { YandexMetrica as YandexMetricaNative } from './NativeModule';
+import { YandexMetricaBridge as YandexMetricaBridgeNative } from './NativeModule';
 
 export class YandexMetrica {
+
   static activateWithApiKey(apiKey) {
-    YandexMetricaNative.activateWithApiKey(apiKey);
+    YandexMetricaBridgeNative.activateWithApiKey(apiKey);
   }
 
   static reportEvent(evt) {
-    YandexMetricaNative.reportEvent(evt);
+    YandexMetricaBridgeNative.reportEvent(evt);
   }
+
+  static setDryRun(enabled) {
+    YandexMetricaBridgeNative.setDryRun(enabled);
+  }
+
 }

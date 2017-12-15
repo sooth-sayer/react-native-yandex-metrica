@@ -1,2 +1,2 @@
 import { NativeModules } from 'react-native';
-export const { YandexMetrica } = NativeModules;
+export const { YandexMetricaBridge } = NativeModules;

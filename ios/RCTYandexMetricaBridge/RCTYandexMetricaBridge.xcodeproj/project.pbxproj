@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD7B154F1FE2B25300CF11C7 /* RCTYandexMetrica.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7B154E1FE2B25300CF11C7 /* RCTYandexMetrica.m */; };
-		BD7B15501FE2B25300CF11C7 /* RCTYandexMetrica.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD7B154D1FE2B25300CF11C7 /* RCTYandexMetrica.h */; };
+		BD7B154F1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7B154E1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m */; };
+		BD7B15501FE2B25300CF11C7 /* RCTYandexMetricaBridge.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD7B154D1FE2B25300CF11C7 /* RCTYandexMetricaBridge.h */; };
 		BD874DE51FE3B13500838C25 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; fileRef = BD874DE41FE3B13500838C25 /* YandexMobileMetrica */; };
 /* End PBXBuildFile section */
 
@@ -19,16 +19,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				BD7B15501FE2B25300CF11C7 /* RCTYandexMetrica.h in CopyFiles */,
+				BD7B15501FE2B25300CF11C7 /* RCTYandexMetricaBridge.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetrica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTYandexMetrica.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD7B154D1FE2B25300CF11C7 /* RCTYandexMetrica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTYandexMetrica.h; sourceTree = "<group>"; };
-		BD7B154E1FE2B25300CF11C7 /* RCTYandexMetrica.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTYandexMetrica.m; sourceTree = "<group>"; };
+		BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetricaBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTYandexMetricaBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7B154D1FE2B25300CF11C7 /* RCTYandexMetricaBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTYandexMetricaBridge.h; sourceTree = "<group>"; };
+		BD7B154E1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTYandexMetricaBridge.m; sourceTree = "<group>"; };
 		BD874DE41FE3B13500838C25 /* YandexMobileMetrica */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = YandexMobileMetrica; path = "../yandex-metrica-lib/YandexMobileMetrica"; sourceTree = "<group>"; };
 		BD874DE71FE3B14900838C25 /* YMMYandexMetrica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMYandexMetrica.h; sourceTree = "<group>"; };
 		BD874DE81FE3B14900838C25 /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMYandexMetricaPreloadInfo.h; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				BD874DE61FE3B14900838C25 /* yandex-metrica-lib */,
-				BD7B154C1FE2B25300CF11C7 /* RCTYandexMetrica */,
+				BD7B154C1FE2B25300CF11C7 /* RCTYandexMetricaBridge */,
 				BD7B154B1FE2B25300CF11C7 /* Products */,
 				BD874DE31FE3B13500838C25 /* Frameworks */,
 			);
@@ -64,18 +64,18 @@
 		BD7B154B1FE2B25300CF11C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetrica.a */,
+				BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetricaBridge.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD7B154C1FE2B25300CF11C7 /* RCTYandexMetrica */ = {
+		BD7B154C1FE2B25300CF11C7 /* RCTYandexMetricaBridge */ = {
 			isa = PBXGroup;
 			children = (
-				BD7B154D1FE2B25300CF11C7 /* RCTYandexMetrica.h */,
-				BD7B154E1FE2B25300CF11C7 /* RCTYandexMetrica.m */,
+				BD7B154D1FE2B25300CF11C7 /* RCTYandexMetricaBridge.h */,
+				BD7B154E1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m */,
 			);
-			path = RCTYandexMetrica;
+			path = RCTYandexMetricaBridge;
 			sourceTree = "<group>";
 		};
 		BD874DE31FE3B13500838C25 /* Frameworks */ = {
@@ -104,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD7B15491FE2B25300CF11C7 /* RCTYandexMetrica */ = {
+		BD7B15491FE2B25300CF11C7 /* RCTYandexMetricaBridge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD7B15531FE2B25300CF11C7 /* Build configuration list for PBXNativeTarget "RCTYandexMetrica" */;
+			buildConfigurationList = BD7B15531FE2B25300CF11C7 /* Build configuration list for PBXNativeTarget "RCTYandexMetricaBridge" */;
 			buildPhases = (
 				BD7B15461FE2B25300CF11C7 /* Sources */,
 				BD7B15471FE2B25300CF11C7 /* Frameworks */,
@@ -116,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = RCTYandexMetrica;
-			productName = RCTYandexMetrica;
-			productReference = BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetrica.a */;
+			name = RCTYandexMetricaBridge;
+			productName = RCTYandexMetricaBridge;
+			productReference = BD7B154A1FE2B25300CF11C7 /* libRCTYandexMetricaBridge.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BD7B15451FE2B25300CF11C7 /* Build configuration list for PBXProject "RCTYandexMetrica" */;
+			buildConfigurationList = BD7B15451FE2B25300CF11C7 /* Build configuration list for PBXProject "RCTYandexMetricaBridge" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD7B15491FE2B25300CF11C7 /* RCTYandexMetrica */,
+				BD7B15491FE2B25300CF11C7 /* RCTYandexMetricaBridge */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7B154F1FE2B25300CF11C7 /* RCTYandexMetrica.m in Sources */,
+				BD7B154F1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +298,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD7B15451FE2B25300CF11C7 /* Build configuration list for PBXProject "RCTYandexMetrica" */ = {
+		BD7B15451FE2B25300CF11C7 /* Build configuration list for PBXProject "RCTYandexMetricaBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD7B15511FE2B25300CF11C7 /* Debug */,
@@ -307,7 +307,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD7B15531FE2B25300CF11C7 /* Build configuration list for PBXNativeTarget "RCTYandexMetrica" */ = {
+		BD7B15531FE2B25300CF11C7 /* Build configuration list for PBXNativeTarget "RCTYandexMetricaBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD7B15541FE2B25300CF11C7 /* Debug */,

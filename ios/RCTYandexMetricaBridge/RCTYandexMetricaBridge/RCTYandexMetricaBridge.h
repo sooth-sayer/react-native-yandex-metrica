@@ -8,6 +8,6 @@
 
 #import <React/RCTBridgeModule.h>
 
-@interface RCTYandexMetrica : NSObject <RCTBridgeModule>
+@interface RCTYandexMetricaBridge : NSObject <RCTBridgeModule>
 
 @end
