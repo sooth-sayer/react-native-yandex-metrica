@@ -2,7 +2,7 @@ require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 ios_root = 'ios/RCTYandexMetrica'
-ymlib_root = ios_root+'/yandex-metrica-lib/static/YandexMobileMetrica.framework'
+ymlib_root = ios_root+'/yandex-metrica-lib'
 
 Pod::Spec.new do |s|
   s.name         = "react-native-yandex-metrica"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://bitbucket.org/sooth_sayer/react-native-yandex-metrica", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/sooth-sayer/react-native-yandex-metrica", :tag => "#{s.version}" }
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |ss|
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
       ymlib_root+'/YandexMobileMetrica'
 
     ss.source_files  =
-      ymlib_root+'/Headers/*.{h}',
+      ymlib_root+'/*.{h}',
       ios_root+'/RCTYandexMetrica/*.{h,m}'
   end
 
