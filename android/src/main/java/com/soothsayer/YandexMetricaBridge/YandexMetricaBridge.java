@@ -12,6 +12,9 @@ import com.yandex.metrica.YandexMetrica;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 public class YandexMetricaBridge extends ReactContextBaseJavaModule {
@@ -24,6 +27,7 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
 
   private boolean dryRun = false;
   private boolean initialized = false;
+  private static boolean initializedStatic = false;
 
   @Override
   public String getName() {
@@ -61,7 +65,15 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void isInitialized(Promise promise) {
-    promise.resolve(initialized);
+    promise.resolve(initialized || initializedStatic);
   }
 
+  public static void activate(Context context, String apiKey) {
+    YandexMetrica.activate(context, apiKey);
+    initializedStatic = true;
+  }
+
+  public static void enableActivityAutoTracking(final Application app) {
+    YandexMetrica.enableActivityAutoTracking(app);
+  }
 }
