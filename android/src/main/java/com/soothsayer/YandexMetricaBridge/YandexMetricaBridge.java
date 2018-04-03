@@ -55,7 +55,7 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
 
     YandexMetrica.activate(getReactApplicationContext(), apiKey);
   }
-  
+
   @ReactMethod
   public void reportEvent(String message, @Nullable ReadableMap params) {
 	if (dryRun) {
@@ -110,11 +110,12 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
 
         return json.toString();
     }
-  
+
   @ReactMethod
   public void reportError(String message) {
     try {
         Integer.valueOf("00xffWr0ng");
+    }
     catch (Throwable error) {
         YandexMetrica.reportError(message, error);
     }
