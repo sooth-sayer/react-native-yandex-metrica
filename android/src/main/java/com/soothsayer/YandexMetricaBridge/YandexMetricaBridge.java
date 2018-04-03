@@ -105,7 +105,7 @@ public class YandexMetricaBridge extends ReactContextBaseJavaModule {
                 }
             }
         } catch (Exception ex) {
-            Log.d(ModuleName, "convertReadableMapToJson fail: " + ex);
+            Log.d(TAG, "convertReadableMapToJson fail: " + ex);
         }
 
         return json.toString();
