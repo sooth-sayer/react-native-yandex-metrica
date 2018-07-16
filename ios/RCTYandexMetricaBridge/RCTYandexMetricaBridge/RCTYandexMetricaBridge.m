@@ -26,7 +26,9 @@ RCT_EXPORT_METHOD(activateWithApiKey:(NSString *)apiKey)
     NSLog(@"Dry run mode, skip Yandex Mobile Metrica activation");
     return;
   }
-  [YMMYandexMetrica activateWithApiKey:apiKey];
+    
+YMMYandexMetricaConfiguration *configuration = [[YMMYandexMetricaConfiguration alloc] initWithApiKey:apiKey];
+[YMMYandexMetrica activateWithConfiguration:configuration];
 }
 
 RCT_EXPORT_METHOD(reportEvent:(NSString *)event)
@@ -40,23 +42,6 @@ RCT_EXPORT_METHOD(reportEvent:(NSString *)event)
   NSLog(@"DID FAIL REPORT EVENT: %@", event);
   NSLog(@"REPORT ERROR: %@", [error localizedDescription]);
                       }];
-}
-
-RCT_EXPORT_METHOD(reportEvent:(NSString *)event parameters:(nullable NSDictionary *)params)
-{
-  if (dryRun) {
-    NSLog(@"Dry run mode, skip event reporting");
-    return;
-  }
-    [YMMYandexMetrica reportEvent:event parameters:params onFailure:^(NSError *error) {
-  NSLog(@"DID FAIL REPORT EVENT WITH PARAMS: %@", event);
-  NSLog(@"REPORT ERROR: %@", [error localizedDescription]);
-                      }];
-}
-
-RCT_EXPORT_METHOD(reportError:(NSString *)message) {
-    NSException *exception = [[NSException alloc] initWithName:message reason:nil userInfo:nil];
-    [YMMYandexMetrica reportError:message exception:exception onFailure:NULL];
 }
 
 RCT_EXPORT_METHOD(setDryRun:(BOOL *)enabled)
