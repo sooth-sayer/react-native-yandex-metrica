@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		499C178320FCC3210046EAC3 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; fileRef = BD874DED1FE3B14900838C25 /* YandexMobileMetrica */; };
 		BD7B154F1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7B154E1FE2B25300CF11C7 /* RCTYandexMetricaBridge.m */; };
 		BD7B15501FE2B25300CF11C7 /* RCTYandexMetricaBridge.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BD7B154D1FE2B25300CF11C7 /* RCTYandexMetricaBridge.h */; };
-		BD874DE51FE3B13500838C25 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; fileRef = BD874DE41FE3B13500838C25 /* YandexMobileMetrica */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD874DE51FE3B13500838C25 /* YandexMobileMetrica in Frameworks */,
+				499C178320FCC3210046EAC3 /* YandexMobileMetrica in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
